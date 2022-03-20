@@ -1,5 +1,8 @@
 .movies{
     color:#073e54;
+    display:flex;
+    margin-right: 200px;
+    flex-flow:column;
 }
 h3{
     text-align: center;

@@ -1,6 +1,10 @@
 .chores{
     font-family:Georgia, 'Times New Roman', Times, serif;
     color:#54072d;
+    display:flex;
+    margin-left: 200px;
+    flex-flow:column;
+    
 }
 .choreHeader{
     text-decoration: underline;
