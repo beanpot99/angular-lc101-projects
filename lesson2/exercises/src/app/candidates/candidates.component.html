@@ -37,15 +37,15 @@
     <hr>
     <div class = 'centered'>
         <button (click)="selected=false">Clear Data & Image</button>
-        <button *ngIf= "selected && "(click)="addToCrew(selected)">Send on Mission</button>
+        <button *ngIf= "selected && !crew.includes(selected) && crew.length<3 "(click)="addToCrew(selected)">Send on Mission</button>
     </div>
 </div>
 
 <!-- The code below is for one of the Bonus Missions -->
 <ng-template #editMission>
-    <h2 class="centered">
-        Mission Name:
-        <!-- Add a keyup.enter event that calls the changeMissionName function. -->
+    <h2 class="centered" *ngIf="!editMissionName;else editMission" (click)="editMissionName=true">
+        Mission Name: {{missionName}}
+        
         <input #newName type="text"/>
     </h2>
 </ng-template>
