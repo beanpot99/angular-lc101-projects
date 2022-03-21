@@ -31,13 +31,13 @@
             <ul>
                 <li *ngFor="let member of crew">{{member.name}}</li>
             </ul>
-            <button *ngIf="crew.length !==0" (click)="">Clear Crew List</button>
+            <button *ngIf="crew.length !==0" (click)="crew=[]">Clear Crew List</button>
         </div>
     </div>
     <hr>
     <div class = 'centered'>
         <button (click)="selected=false">Clear Data & Image</button>
-        <button (click)="addToCrew(selected)">Send on Mission</button>
+        <button *ngIf= ""(click)="addToCrew(selected)">Send on Mission</button>
     </div>
 </div>
 
