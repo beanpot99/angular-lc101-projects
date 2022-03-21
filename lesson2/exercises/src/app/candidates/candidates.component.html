@@ -43,9 +43,9 @@
 
 <!-- The code below is for one of the Bonus Missions -->
 <ng-template #editMission>
-    <h2 class="centered" *ngIf="!editMissionName;else editMission" (click)="editMissionName=true">
+    <h2 class="centered" *ngIf="!editMissionName;else editMission" (click)="editMissionName=true" >
         Mission Name: {{missionName}}
         
-        <input #newName type="text"/>
+        <input #newName (keyup.enter)="changeMissionName(editMission)" type="text"/>
     </h2>
 </ng-template>
