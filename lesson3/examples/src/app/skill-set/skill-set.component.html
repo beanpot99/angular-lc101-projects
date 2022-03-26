@@ -6,9 +6,9 @@
    <hr>
    <h3>Copy of Skill List</h3>
    <ol [class.ol-style]="changeColor">
-      <li *ngFor="let skill of skills">{{skill}}</li>
+      <li (click)="changeColor-!changeColor" *ngFor="let skill of skills" >{{skill}}</li>
    </ol>
    <hr>
-   <p [class.p-style]="!changeColor" >Hello!</p>
+   <p [class.p-style]="!changeColor" (mouseover)="changeColor=!changeColor">Hello!</p>
    
 </div>
