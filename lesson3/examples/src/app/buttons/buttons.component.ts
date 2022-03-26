@@ -1,3 +1,5 @@
+import { getLocaleDateFormat } from '@angular/common';
+import { StaticSymbolResolver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonsComponent implements OnInit {
    buttonHeading: string = "Buttons"
-   inactive: boolean = false;
-
+   inactive:boolean=false;
    constructor() { }
 
    ngOnInit() { }
+changeButton(color){
 
+}
 }
