@@ -34,11 +34,11 @@ export class AppComponent {
       this.height=0;
     }
   }
-  moveRocket(image, direction){
+  moveRocket(rocketImage, direction){
     if(direction==='right'){
-      let movement= parseInt(image.style.left)+ 10 + 'px';
-      image.style.left=movement;
-      this.width=this.width+10000;
+      let movement= parseInt(rocketImage.style.left)+ 10 + 'px';
+      rocketImage.style.left=movement;
+      this.width=this.width + 10000;
     }
   }
 }
