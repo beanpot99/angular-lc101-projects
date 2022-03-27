@@ -17,7 +17,7 @@
 
       <div class="col-6">
          <div class="shuttle-background" [style.backgroundColor]='color'>
-            <img #rocketShipImage src="assets/images/LaunchCode_rocketline_white.png" height = "75" width = "75" [style.left]="0" [style.bottom]="0"/>
+            <img #rocketImage src="assets/images/LaunchCode_rocketline_white.png" height = "75" width = "75" [style.left]="0" [style.bottom]="0"/>
          </div>
       </div>
 
@@ -25,7 +25,7 @@
          <div class="container-right"b>
             <button>Up</button>
             <button>Down</button>
-            <button (click)="moveRocket(rocketShipImage,'right')">Right</button>
+            <button (click)="moveRocket(rocketImage,'right')">Right</button>
             <button>Left</button>
             <h3>Space Shuttle Height</h3>
             <p>{{height}} km</p>
@@ -34,7 +34,7 @@
    </div>
    <div class="container-control-buttons">
       <button (click)="handleTakeOff()">Take Off</button>
-      <button (click)="handleLanding()">Land</button>
-      <button (click)="handleAbort()">Abort Mission</button>
+      <button (click)="handleLanding(rocketImage) rocketImage.style.bottom='0px'">Land</button>
+      <button (click)="handleAbort(rocketImage) rocketImage.style.bottom='0px'">Abort Mission</button>
    </div>
 </div>
