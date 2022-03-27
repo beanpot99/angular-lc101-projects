@@ -12,4 +12,33 @@ export class AppComponent {
   height = 0;
   width = 0;
   message = 'Space shuttle ready for takeoff!';
+  handleTakeOff(){
+    let result=window.confirm('Confirm that the shuttle is ready for takeoff!');
+    if(result){
+      this.message="Shuttle in flight.";
+      this.color='blue';
+      this.height+=10000;
+    }
+  }
+  handleLanding(){
+   window.alert('The shuttle is landing. Landing gear engaged!');
+  this.color="green";
+  this.message="The shuttle has landed";
+  this.height=0;
+  }
+  handleAbort(){
+    let confirm=window.confirm('Are you sure you want to abort the mission?');
+    if(confirm){
+      this.message="Mission aborted";
+      this.color="red";
+      this.height=0;
+    }
+  }
+  moveRocket(image, direction){
+    if(direction==='right'){
+      let movement= parseInt(image.style.left)+ 10 + 'px';
+      image.style.left=movement;
+      this.width=this.width+10000;
+    }
+  }
 }
